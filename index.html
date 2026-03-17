@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给你的特别心意 | 异地电子贺卡</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1><i class="fas fa-heart heart-icon"></i> 给最爱的你 <i class="fas fa-heart heart-icon"></i></h1>
+                <p>虽然我们相隔两地，但我的心永远和你在一起</p>
+            </div>
+            
+            <div class="flower-area">
+                <div class="flower">
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="petal"></div>
+                    <div class="flower-center"></div>
+                    <div class="flower-stem"></div>
+                    <div class="leaf leaf-1"></div>
+                    <div class="leaf leaf-2"></div>
+                </div>
+                <div class="flowers-container" id="flowersContainer"></div>
+            </div>
+            
+            <div class="message-area">
+                <h3><i class="fas fa-envelope"></i> 给你的悄悄话</h3>
+                <p class="message-text" id="messageText">
+                    亲爱的，虽然我们相隔千里，但距离从不会减少我对你的思念。<br><br>
+                    这束虚拟的玫瑰，代表我此刻想要送给你的心意。希望它能给你带来一丝甜蜜，就像你每天给我带来的温暖一样。<br><br>
+                    期待我们下次见面的日子，到那时，我一定会亲手送你一束真正的鲜花，给你一个大大的拥抱。<br><br>
+                    永远爱你的我 ❤️
+                </p>
+            </div>
+            
+            <div class="interactive-section">
+                <button class="btn" id="sendFlowersBtn">
+                    <i class="fas fa-paper-plane"></i> 送出虚拟花束
+                </button>
+                
+                <div class="envelope" id="envelope">
+                    <div class="letter">
+                        <h4>异地恋小贴士：</h4>
+                        <p>1. 每天保持联系，分享生活点滴</p>
+                        <p>2. 定期安排视频约会</p>
+                        <p>3. 计划下一次见面的时间</p>
+                        <p>4. 互送小礼物表达思念</p>
+                    </div>
+                </div>
+                
+                <button class="btn" id="customizeBtn">
+                    <i class="fas fa-edit"></i> 自定义祝福语
+                </button>
+            </div>
+            
+            <div class="customize-section hidden" id="customizeSection">
+                <h3>个性化你的贺卡</h3>
+                
+                <div class="input-group">
+                    <label for="recipientName">收件人姓名</label>
+                    <input type="text" id="recipientName" placeholder="输入TA的名字" value="亲爱的">
+                </div>
+                
+                <div class="input-group">
+                    <label for="customMessage">自定义祝福语</label>
+                    <textarea id="customMessage" placeholder="输入你想对TA说的话...">虽然我们相隔千里，但距离从不会减少我对你的思念。
+
+这束虚拟的玫瑰，代表我此刻想要送给你的心意。希望它能给你带来一丝甜蜜，就像你每天给我带来的温暖一样。
+
+期待我们下次见面的日子，到那时，我一定会亲手送你一束真正的鲜花，给你一个大大的拥抱。
+
+永远爱你的我 ❤️</textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label>选择花朵颜色</label>
+                    <div class="color-options">
+                        <div class="color-option active" style="background-color: #ff6b9d;" data-color1="#ff9ec0" data-color2="#ff6b9d"></div>
+                        <div class="color-option" style="background-color: #ff9a3d;" data-color1="#ffc074" data-color2="#ff9a3d"></div>
+                        <div class="color-option" style="background-color: #9d4edd;" data-color1="#c77dff" data-color2="#9d4edd"></div>
+                        <div class="color-option" style="background-color: #4cc9f0;" data-color1="#90e0ef" data-color2="#4cc9f0"></div>
+                        <div class="color-option" style="background-color: #ff5d8f;" data-color1="#ff97b7" data-color2="#ff5d8f"></div>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="cardTheme">选择贺卡主题</label>
+                    <select id="cardTheme">
+                        <option value="romantic">浪漫粉红</option>
+                        <option value="elegant">优雅紫色</option>
+                        <option value="sunshine">阳光橙色</option>
+                        <option value="spring">春日绿色</option>
+                    </select>
+                </div>
+                
+                <button class="btn" id="applyChangesBtn" style="width: 100%;">
+                    <i class="fas fa-check"></i> 应用更改
+                </button>
+            </div>
+            
+            <div class="footer">
+                <p>❤️ 真爱无惧距离，心意跨越山海 ❤️</p>
+                <p>将这份电子贺卡分享给TA，表达你的思念吧！</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
